@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sign Up for GlobeTrot</title>
+    <link rel="stylesheet" type="text/css" href="GlobeTrotReg.css">
+    <script src="GlobeTrotReg.js"></script>
+</head>
+
+<body>
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = 'https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.1&appId=255397715164564&autoLogAppEvents=1';
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+<h1>Register as a new user below, or link your Facebook account:</h1>
+
+<div class="fb-login-button" data-max-rows="1" data-size="large" data-button-type="continue_with" data-show-faces="false" data-auto-logout-link="false" data-use-continue-as="false"></div>
+<form action="/form_page" method="post">
+    <div>
+<label for="email"><b>Email</b></label>
+<input type="text" placeholder="Enter Email" name="email" required>
+
+<label for="psw"><b>Password</b></label>
+<input type="text" placeholder="Enter Password" name="psw" required>
+
+<label for="psw-repeat"><b>Re-Enter Password</b></label>
+<input type="text" placeholder="Re-Enter Pasword" name="psw-repeat" required>
+
+        <label for="country"><b>Country</b></label>
+<input type="text" placeholder="Enter Country" name="country" required>
+
+<textarea rows="5" cols="80" id="title"></textarea>
+        <label>
+    <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember Me
+</label>
+
+
+
+
+
+
+<div class="clearfix">
+    <button type="submit" class="signupbtn">Sign Up</button>
+    <button type="button" class="cancelbtn">Cancel</button>
+
+</div>
+</div>
+</form>
+</body>
+</html>

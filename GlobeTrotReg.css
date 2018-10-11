@@ -1,0 +1,27 @@
+.cancelbtn {
+    padding: 14px 20px;
+    background-color: #f44336
+}
+
+.signupbtn {
+    padding: 14px 20px;
+    background-color: #629632;
+}
+
+.cancelbtn, .signupbtn {
+    float: left;
+    width: 50%
+}
+
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.description {
+    width: 90px;
+    height: 390px;
+    border: 1px solid #999999;
+    padding: 5px;
+}
