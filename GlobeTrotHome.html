@@ -3,8 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <title>GlobeTrot Homepage</title>
+    <link rel="stylesheet" type="text/css" href="GlobeTrotHome.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="GlobeTrotHome.js"></script>
 </head>
-<body>
+<form action="/form_page" method="post">
+    <div class="topnav">
+    <a class="active" href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact Us</a>
+    <div class="search-container">
+        <input type="text" placeholder="Search a City..." name="search">
+        <button type="submit"><i class="fa fa-search"></i></button>
+    </div>
+</div>
 <h2>GlobeTrot</h2>
 <ul>
     <li>Friends</li>
@@ -15,12 +27,11 @@
 <h1>Welcome to GlobeTrot!</h1>
 <p>With GlobeTrot you are connected with a network of travelers and locals in order to create the greatest experiences</p>
 
-<p>You can either sign up or log in below:</p>
 
-<a href="GlobeTrotReg.html">Sign up</a>
-
-<a href="GlobeTrotLogin.html">Log in</a>
-
+    <div class="fix">
+        <button type="button" class="joinbtn" onclick=" window.open('http://GlobeTrotReg.html')">Join GlobeTrot</button>
+    </div>
+</form>
 
 </body>
 </html>
