@@ -20,16 +20,41 @@
 <p>Fill in the form to create an account or continue with your Facebook</p>
 
 <div class="fb-login-button" data-max-rows="1" data-size="large" data-button-type="continue_with" data-show-faces="false" data-auto-logout-link="false" data-use-continue-as="false"></div>
-<form action="/form_page" method="post">
+<form action="/form_page.txt" method="post">
     <div>
-<label for="email"><b>Email:</b></label>
+<label for="username"><b>Username:</b></label><span style="color: red !important; display: inline; float: none;">*</span>
+<input type="text" placeholder="Enter Username" name="username">
+
+<label for="email"><b>Email:</b></label><span style="color: red !important; display: inline; float: none;">*</span>
 <input type="text" placeholder="Enter Email" name="email" required>
 
-<label for="psw"><b>Password:</b></label>
-<input type="text" placeholder="Enter Password" name="psw" required>
+<label for="psw"><b>Password:</b></label><span style="color: red !important; display: inline; float: none;">*</span>
+<input type="password" placeholder="Enter Password" name="psw" id="myInput" required>
 
-<label for="psw-repeat"><b>Repeat Password:</b></label>
-<input type="text" placeholder="Repeat Password" name="psw-repeat" required>
+<label for="psw-repeat"><b>Repeat Password:</b></label><span style="color: red !important; display: inline; float: none;">*</span>
+<input type="password" placeholder="Repeat Password" name="psw-repeat" id="myInput2" required>
+
+<input type="checkbox" onclick="myFunction()">Show Password <br><br>
+
+<script>
+    function myFunction() {
+    var x = document.getElementById("myInput");
+    if (x.type === "password") {
+        x.type = "text";
+    } else {
+        x.type = "password";
+    }
+
+    var y = document.getElementById("myInput2");
+    if (y.type === "password") {
+        y.type = "text";
+    } else {
+        y.type = "password";
+    }
+    }
+</script>
+
+
 
         <label for="country">Country</label><span style="color: red !important; display: inline; float: none;">*</span>
         <select id="country" name="country" class="form-control">
@@ -280,7 +305,7 @@
             </select>
 
         <div class="control-group">
-  <label for="dob-day" class="control-label">Date of birth</label>
+  <label for="dob-day" class="control-label">Date of birth</label><span style="color: red !important; display: inline; float: none;">*</span>
   <div class="controls">
     <select name="dob-day" id="dob-day">
       <option value="">Day</option>
